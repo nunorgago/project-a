@@ -21,15 +21,20 @@ jobs:
         run: |
           git config user.name "Nuno Gago"
           git config user.email "nuno.gago@fanduel.com"
-
-      - name: Create or update docs-only branch
+          
+      # Step 3: Authenticate Git using GITHUB_TOKEN
+      - name: Set Git authentication
         run: |
-          # Create docs-only branch from subtree split of /docs
+          git remote set-url origin https://x-access-token:${{ secrets.GH_DOCS_TOKEN }}@github.com/${{ github.repository }}.git
+
+      # Step 4: Create or update docs-only branch
+      - name: Create/update docs-only branch
+        run: |
+          # Create a temporary branch with only /docs
           git subtree split -P docs -b docs-only-temp
 
           # Force push to remote docs-only branch
           git push origin docs-only-temp:docs-only --force
 
-      - name: Clean up
-        run: |
+          # Delete temporary branch locally
           git branch -D docs-only-temp
