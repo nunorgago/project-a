@@ -1,0 +1,35 @@
+name: Update Docs-Only Branch
+
+on:
+  push:
+    paths:
+      - 'docs/**'   # Trigger only when /docs changes
+    branches:
+      - main       # or your default branch
+
+jobs:
+  update-docs-only:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Needed for subtree
+
+      - name: Configure Git
+        run: |
+          git config user.name "Nuno Gago"
+          git config user.email "nuno.gago@fanduel.com"
+
+      - name: Create or update docs-only branch
+        run: |
+          # Create docs-only branch from subtree split of /docs
+          git subtree split -P docs -b docs-only-temp
+
+          # Force push to remote docs-only branch
+          git push origin docs-only-temp:docs-only --force
+
+      - name: Clean up
+        run: |
+          git branch -D docs-only-temp
