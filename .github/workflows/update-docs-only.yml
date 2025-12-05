@@ -10,6 +10,8 @@ on:
 jobs:
   update-docs-only:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write   # <-- gives push access to repo
 
     steps:
       - name: Checkout repository
@@ -21,7 +23,7 @@ jobs:
         run: |
           git config user.name "Nuno Gago"
           git config user.email "nuno.gago@fanduel.com"
-          
+
       # Step 3: Authenticate Git using GITHUB_TOKEN
       - name: Set Git authentication
         run: |
