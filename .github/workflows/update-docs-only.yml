@@ -27,7 +27,7 @@ jobs:
       # Step 3: Authenticate Git using GITHUB_TOKEN
       - name: Set Git authentication
         run: |
-          git remote set-url origin https://x-access-token:${{ secrets.GH_DOCS_TOKEN }}@github.com/${{ github.repository }}.git
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
 
       # Step 4: Create or update docs-only branch
       - name: Create/update docs-only branch
