@@ -1,0 +1,29 @@
+{
+  "id": "intro",
+  "title": "Project A",
+  "description": "This is project A documentation section.",
+  "source": "@site/docs/intro.md",
+  "sourceDirName": ".",
+  "slug": "/",
+  "permalink": "/project-a/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nunorgago/project-a/edit/main/docs/intro.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "slug": "/",
+    "id": "intro",
+    "title": "Project A",
+    "hide_table_of_contents": true
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Deployment",
+    "permalink": "/project-a/deployment"
+  },
+  "next": {
+    "title": "Setup",
+    "permalink": "/project-a/setup"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "deployment",
+  "title": "Deployment",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex. Nunc sit amet nulla at elementum scelerisque. Nunc sit amet nulla at elementum scelerisque. In ut quam viverra ornare cursus euismod. In hac habitasse platea dictumst.",
+  "source": "@site/docs/deployment.md",
+  "sourceDirName": ".",
+  "slug": "/deployment",
+  "permalink": "/project-a/deployment",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/nunorgago/project-a/edit/main/docs/deployment.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "docsSidebar",
+  "next": {
+    "title": "Project A",
+    "permalink": "/project-a/"
+  }
+}
