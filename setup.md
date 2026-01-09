@@ -1,5 +1,6 @@
 # Setup
 
+Project A
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.
 
 ## Install
